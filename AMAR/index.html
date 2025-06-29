@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
@@ -23,25 +24,21 @@
   <section class="hero">
     <img src="image/Gojo.png" alt="Foto Amar" class="profil-img">
     <h2>Frontend Web Developer</h2>
-    <p>Mahasiswa Informatika | UI/UX & Web Design Modern</p>
+    <p>UI/UX & Web Design Sederhana</p>
   </section>
 
   <section id="profil" class="card">
     <h2>Profil</h2>
-    <p>Mahasiswa Informatika semester 4 Universitas Muhammadiyah Sidoarjo, memiliki ketertarikan dalam bidang Frontend Development dan UI/UX Design. Terampil dalam HTML, CSS, dan JavaScript serta terus mengembangkan skill melalui project dan organisasi kampus.</p>
+    <p>Mahasiswa Informatika semester 4 Universitas Muhammadiyah Sidoarjo, memiliki ketertarikan dalam bidang Frontend Development dan UI/UX Design. Terampil dalam HTML, CSS, dan JavaScript serta terus mengembangkan skill melalui project.</p>
   </section>
 
   <section id="skill" class="card">
-    <h2>Kemampuan</h2>
+    <h2>Skill</h2>
     <div class="skills">
       <span><i class="fab fa-html5"></i> HTML5</span>
       <span><i class="fab fa-css3-alt"></i> CSS3</span>
       <span><i class="fab fa-js-square"></i> JavaScript</span>
-      <span><i class="fas fa-laptop-code"></i> Responsive Web</span>
-      <span><i class="fab fa-git-alt"></i> Git</span>
       <span><i class="fab fa-github"></i> GitHub</span>
-      <span><i class="fab fa-react"></i> React.js</span>
-      <span><i class="fas fa-paint-brush"></i> Tailwind CSS</span>
       <span><i class="fab fa-figma"></i> Figma</span>
     </div>
   </section>
@@ -65,12 +62,25 @@
   <p><i class="fab fa-whatsapp"></i> +62 852-5812-8694</p>
   <p><i class="fas fa-envelope"></i> amarMakrufmaulanafirdaus@gmail.com</p>
   <p><i class="fas fa-map-marker-alt"></i> Sidoarjo</p>
-  
-  <button onclick="window.open('mailto:amarMakrufmaulanafirdaus@gmail.com')">
+
+  <button class="btn-kirim" onclick="bukaModal()">
     <i class="fas fa-paper-plane"></i> Kirim Pesan
   </button>
 </section>
 
+  <!-- Modal -->
+<div id="modalKontak" class="modal">
+  <div class="modal-content animate">
+    <span class="close" onclick="tutupModal()">&times;</span>
+    <h3>Pilih Metode Kirim Pesan</h3>
+    <button class="btn-wa" onclick="window.open('https://wa.me/6285258128694', '_blank')">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </button>
+    <button class="btn-email" onclick="window.open('mailto:amarMakrufmaulanafirdaus@gmail.com')">
+      <i class="fas fa-envelope"></i> Email
+    </button>
+  </div>
+</div>
 
   <footer>
     <p>© 2025 Amar Makruf Maulana Firdaus</p>
