@@ -1,3 +1,4 @@
+/* BODY & LAYOUT */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -149,6 +150,117 @@ button {
 button:hover {
   transform: translateY(-3px);
   opacity: 0.9;
+}
+
+/* Tombol utama */
+.btn-kirim {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn-kirim:hover {
+  background-color: #45a049;
+}
+
+/* MODAL Styling (FLEX CENTER) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+}
+
+/* Modal aktif */
+.modal.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Animasi muncul */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.modal-content {
+  background-color: #1A2238;
+  padding: 25px 20px;
+  border-radius: 16px;
+  width: 85%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  animation: fadeIn 0.4s ease;
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #E0E0E0;
+}
+
+.modal-content button {
+  margin: 12px 0;
+  padding: 12px 18px;
+  width: 90%;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-wa {
+  background-color: #25D366;
+  color: #fff;
+}
+
+.btn-wa:hover {
+  background-color: #1ebe5d;
+}
+
+.btn-email {
+  background-color: #EA4335;
+  color: #fff;
+}
+
+.btn-email:hover {
+  background-color: #d43a2e;
+}
+
+.close {
+  color: #E0E0E0;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: -10px;
+  margin-right: -5px;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+/* Responsive modal */
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 90%;
+  }
 }
 
 footer {
